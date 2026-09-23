@@ -7,6 +7,7 @@ namespace tuple {
 class Tuple {
 public:
   Tuple(double x, double y, double z, double w);
+  Tuple(double x, double y, double z);
 
   [[nodiscard]] double x() const;
   [[nodiscard]] double y() const;

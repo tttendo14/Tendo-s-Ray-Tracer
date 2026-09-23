@@ -14,6 +14,9 @@ project(RTX VERSION 0.1)
 add_library(tuples src/tuples.cpp)
 target_include_directories(tuples PUBLIC include)
 
+add_library(colors src/colors.cpp)
+target_include_directories(colors PUBLIC include)
+
 add_executable(main app/main.cpp)
 target_link_libraries(main PRIVATE tuples)
 

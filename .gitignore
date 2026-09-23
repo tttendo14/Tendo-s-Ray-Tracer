@@ -71,3 +71,6 @@ Testing/
 
 # the book
 *.pdf
+
+# playground
+playground/

@@ -9,6 +9,8 @@ namespace tuple {
 Tuple::Tuple(double x, double y, double z, double w)
     : x_(x), y_(y), z_(z), w_(w) {}
 
+Tuple::Tuple(double x, double y, double z) : Tuple(x, y, z, 0.0) {}
+
 double Tuple::x() const { return x_; }
 double Tuple::y() const { return y_; }
 double Tuple::z() const { return z_; }
