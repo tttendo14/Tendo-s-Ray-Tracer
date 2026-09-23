@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/tendo/courses/ray-tracer-challenge/build",
+  "command": "/usr/bin/c++  -I/Users/tendo/courses/ray-tracer-challenge/include -std=gnu++20 -arch arm64 -o CMakeFiles/tuples.dir/src/tuples.cpp.o -c /Users/tendo/courses/ray-tracer-challenge/src/tuples.cpp",
+  "file": "/Users/tendo/courses/ray-tracer-challenge/src/tuples.cpp",
+  "output": "CMakeFiles/tuples.dir/src/tuples.cpp.o"
+},
+{
+  "directory": "/Users/tendo/courses/ray-tracer-challenge/build",
+  "command": "/usr/bin/c++  -I/Users/tendo/courses/ray-tracer-challenge/include -std=gnu++20 -arch arm64 -o CMakeFiles/main.dir/app/main.cpp.o -c /Users/tendo/courses/ray-tracer-challenge/app/main.cpp",
+  "file": "/Users/tendo/courses/ray-tracer-challenge/app/main.cpp",
+  "output": "CMakeFiles/main.dir/app/main.cpp.o"
+},
+{
+  "directory": "/Users/tendo/courses/ray-tracer-challenge/build",
+  "command": "/usr/bin/c++  -I/Users/tendo/courses/ray-tracer-challenge/include -std=gnu++20 -arch arm64 -o CMakeFiles/projectiles.dir/app/projectiles.cpp.o -c /Users/tendo/courses/ray-tracer-challenge/app/projectiles.cpp",
+  "file": "/Users/tendo/courses/ray-tracer-challenge/app/projectiles.cpp",
+  "output": "CMakeFiles/projectiles.dir/app/projectiles.cpp.o"
+}
+]
