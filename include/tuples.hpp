@@ -19,6 +19,20 @@ public:
   [[nodiscard]] double magnitude() const;
   [[nodiscard]] Tuple normalize() const;
 
+  [[nodiscard]] Tuple operator+(const Tuple &other) const;
+  [[nodiscard]] Tuple operator-(const Tuple &other) const;
+  [[nodiscard]] Tuple operator-() const;
+  [[nodiscard]] Tuple operator*(double scalar) const;
+  [[nodiscard]] Tuple operator/(double scalar) const;
+
+  [[nodiscard]] Tuple add(const Tuple &other) const;
+  [[nodiscard]] Tuple subtract(const Tuple &other) const;
+  [[nodiscard]] Tuple scale(double scalar) const;
+  [[nodiscard]] Tuple divide(double scalar) const;
+
+  [[nodiscard]] double dot(const Tuple &other) const;
+  [[nodiscard]] Tuple cross(const Tuple &other) const;
+
   void print(std::string_view name) const;
 
 private:
@@ -28,16 +42,6 @@ private:
 [[nodiscard]] Tuple point(double x, double y, double z);
 [[nodiscard]] Tuple vector(double x, double y, double z);
 
-[[nodiscard]] Tuple operator+(const Tuple &a, const Tuple &b);
-[[nodiscard]] Tuple operator-(const Tuple &a, const Tuple &b);
-
-[[nodiscard]] Tuple operator-(const Tuple &a);
-
-[[nodiscard]] Tuple operator*(const Tuple &a, const double &scalar);
 [[nodiscard]] Tuple operator*(const double &scalar, const Tuple &a);
-[[nodiscard]] Tuple operator/(const Tuple &a, const double &scalar);
-
-[[nodiscard]] double dot(const Tuple &a, const Tuple &b);
-[[nodiscard]] Tuple cross(const Tuple &a, const Tuple &b);
 
 } // namespace tuple

@@ -38,30 +38,37 @@ void Tuple::print(std::string_view name) const {
 Tuple point(double x, double y, double z) { return Tuple{x, y, z, 1.0}; }
 Tuple vector(double x, double y, double z) { return Tuple{x, y, z, 0.0}; }
 
-Tuple operator+(const Tuple &a, const Tuple &b) {
-  return Tuple{a.x() + b.x(), a.y() + b.y(), a.z() + b.z(), a.w() + b.w()};
+Tuple Tuple::operator+(const Tuple &other) const {
+  return Tuple{x_ + other.x_, y_ + other.y_, z_ + other.z_, w_ + other.w_};
 }
-Tuple operator-(const Tuple &a, const Tuple &b) {
-  return Tuple{a.x() - b.x(), a.y() - b.y(), a.z() - b.z(), a.w() - b.w()};
-}
-
-Tuple operator-(const Tuple &a) {
-  return Tuple{-a.x(), -a.y(), -a.z(), -a.w()};
+Tuple Tuple::operator-(const Tuple &other) const {
+  return Tuple{x_ - other.x_, y_ - other.y_, z_ - other.z_, w_ - other.w_};
 }
 
-Tuple operator*(const Tuple &a, const double &scalar) {
-  return Tuple{a.x() * scalar, a.y() * scalar, a.z() * scalar, a.w() * scalar};
+Tuple Tuple::operator-() const { return Tuple{-x_, -y_, -z_, -w_}; }
+
+Tuple Tuple::operator*(double scalar) const {
+  return Tuple{x_ * scalar, y_ * scalar, z_ * scalar, w_ * scalar};
 }
 Tuple operator*(const double &scalar, const Tuple &a) { return a * scalar; }
-Tuple operator/(const Tuple &a, const double &scalar) {
-  return Tuple{a.x() / scalar, a.y() / scalar, a.z() / scalar, a.w() / scalar};
+Tuple Tuple::operator/(double scalar) const {
+  return Tuple{x_ / scalar, y_ / scalar, z_ / scalar, w_ / scalar};
 }
 
-double dot(const Tuple &a, const Tuple &b) {
-  return a.x() * b.x() + a.y() * b.y() + a.z() * b.z() + a.w() * b.w();
+Tuple Tuple::add(const Tuple &other) const { return *this + other; }
+
+Tuple Tuple::subtract(const Tuple &other) const { return *this - other; }
+
+Tuple Tuple::scale(double scalar) const { return *this * scalar; }
+
+Tuple Tuple::divide(double scalar) const { return *this / scalar; }
+
+double Tuple::dot(const Tuple &other) const {
+  return x_ * other.x_ + y_ * other.y_ + z_ * other.z_ + w_ * other.w_;
 }
-Tuple cross(const Tuple &a, const Tuple &b) {
-  return vector(a.y() * b.z() - a.z() * b.y(), a.z() * b.x() - a.x() * b.z(),
-                a.x() * b.y() - a.y() * b.x());
+Tuple Tuple::cross(const Tuple &other) const {
+  return vector(y_ * other.z_ - z_ * other.y_,
+                z_ * other.x_ - x_ * other.z_,
+                x_ * other.y_ - y_ * other.x_);
 }
 } // namespace tuple

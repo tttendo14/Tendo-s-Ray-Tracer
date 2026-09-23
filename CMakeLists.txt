@@ -1,10 +1,15 @@
 cmake_minimum_required(VERSION 4.4.3)
 
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-project(RTX VERSION 0.1)
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+)
 
-set(CMAKE_CXX_STANDARD 20)
+project(RTX VERSION 0.1)
 
 add_library(tuples src/tuples.cpp)
 target_include_directories(tuples PUBLIC include)
