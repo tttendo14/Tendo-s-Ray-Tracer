@@ -26,8 +26,6 @@ int main() {
   Projectile proj(Tuple(100.0, 100.0, 50.0, 1.0), Tuple(0.0, 0.0, 0.0, 0.0));
   Environment env(Tuple(0.0, 10.0, 0.0, 0.0), Tuple(2.0, 0.0, 2.0, 0.0));
 
-  env = env.dot(proj).cross(proj);
-
   int step = 0, numSteps = 20;
   while (step < numSteps) {
     proj.print();
