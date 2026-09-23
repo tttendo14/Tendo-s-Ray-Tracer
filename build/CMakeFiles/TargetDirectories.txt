@@ -1,5 +1,0 @@
-/Users/tendo/courses/ray-tracer-challenge/build/CMakeFiles/tuples.dir
-/Users/tendo/courses/ray-tracer-challenge/build/CMakeFiles/main.dir
-/Users/tendo/courses/ray-tracer-challenge/build/CMakeFiles/projectiles.dir
-/Users/tendo/courses/ray-tracer-challenge/build/CMakeFiles/edit_cache.dir
-/Users/tendo/courses/ray-tracer-challenge/build/CMakeFiles/rebuild_cache.dir
