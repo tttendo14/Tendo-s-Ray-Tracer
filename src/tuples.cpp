@@ -16,6 +16,11 @@ double Tuple::y() const { return y_; }
 double Tuple::z() const { return z_; }
 double Tuple::w() const { return w_; }
 
+bool Tuple::operator==(const Tuple &other) const {
+  return math::equal(x_, other.x_) && math::equal(y_, other.y_) &&
+         math::equal(z_, other.z_) && math::equal(w_, other.w_);
+}
+
 bool Tuple::isPoint() const { return math::equal(w_, 1.0); }
 bool Tuple::isVector() const { return math::equal(w_, 0.0); }
 

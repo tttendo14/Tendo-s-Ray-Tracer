@@ -14,6 +14,8 @@ public:
   [[nodiscard]] double z() const;
   [[nodiscard]] double w() const;
 
+  [[nodiscard]] bool operator==(const Tuple &other) const;
+
   [[nodiscard]] bool isPoint() const;
   [[nodiscard]] bool isVector() const;
 

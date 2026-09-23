@@ -1,4 +1,5 @@
 #include "colors.hpp"
+#include "float_compare.hpp"
 
 #include <iostream>
 
@@ -10,6 +11,11 @@ Color::Color(double red, double green, double blue)
 double Color::red() const { return red_; }
 double Color::green() const { return green_; }
 double Color::blue() const { return blue_; }
+
+bool Color::operator==(const Color &other) const {
+  return math::equal(red_, other.red_) && math::equal(green_, other.green_) &&
+         math::equal(blue_, other.blue_);
+}
 
 Color Color::operator+(const Color &other) const {
   return {red_ + other.red_, green_ + other.green_, blue_ + other.blue_};

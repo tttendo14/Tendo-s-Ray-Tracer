@@ -17,6 +17,10 @@ target_include_directories(tuples PUBLIC include)
 add_library(colors src/colors.cpp)
 target_include_directories(colors PUBLIC include)
 
+add_library(canvas src/canvas.cpp)
+target_link_libraries(canvas PUBLIC colors)
+target_include_directories(canvas PUBLIC include)
+
 add_executable(main app/main.cpp)
 target_link_libraries(main PRIVATE tuples)
 

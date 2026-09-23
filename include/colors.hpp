@@ -12,6 +12,8 @@ public:
   [[nodiscard]] double green() const;
   [[nodiscard]] double blue() const;
 
+  [[nodiscard]] bool operator==(const Color &other) const;
+
   [[nodiscard]] Color operator+(const Color &other) const;
   [[nodiscard]] Color operator-(const Color &other) const;
   [[nodiscard]] Color operator-() const;
